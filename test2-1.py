@@ -9,19 +9,19 @@ import math
 #温度，T
 T = 273
 #压强，p
-P = 1.0e-2
-#密度，P
-p = 1.24e-2
-#阿伏伽德罗常数，NA
-NA = 6.022e2
+p = 1.0e-2
+#密度，rho
+rho = 1.24e-2
+#阿伏伽德罗常数，Na
+Na = 6.022e2
 #常数，k
 K = 1.38e-23
 #物质的量，n
-n = p/K*T
+n = p/(K*T)
 #质量，m
-m = P/n
+m = rho/n
 #气体的摩尔质量
-M = m*NA
+M = m*Na
 print 'n=',n,'m=',m
-M=(p*K*T*NA)/P
-print 'M=',M
+M=(rho*K*T*Na)/p
+print 'M=(p*K*T*Na)/P=',rho, '*', K, '*', T, '*', Na, '/', p, '=', M
